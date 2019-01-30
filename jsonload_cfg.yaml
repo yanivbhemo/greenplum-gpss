@@ -1,0 +1,25 @@
+DATABASE: from_kafka_db
+USER: gpadmin
+HOST: localhost
+PORT: 5432
+KAFKA:
+   INPUT:
+     SOURCE:
+        BROKERS: kafka-client:9092
+        TOPIC: topic_json_gpkafka
+     COLUMNS:
+        - NAME: jdata
+          TYPE: json
+     FORMAT: json
+     ERROR_LIMIT: 10
+   OUTPUT:
+     TABLE: json_from_kafka
+     MAPPING:
+        - NAME: customer_id
+          EXPRESSION: (jdata->>'cust_id')::int
+        - NAME: month
+          EXPRESSION: (jdata->>'month')::int
+        - NAME: amount_paid
+          EXPRESSION: (jdata->>'expenses')::decimal
+   COMMIT:
+     MAX_ROW: 1000
