@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ## Test
+=======
+oobar
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+```Use the package manager pip to install foobar.```
+>>>>>>> b2df57737215aff96a17e8bc12bf540081c980e6
