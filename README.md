@@ -14,7 +14,7 @@ The Greenplum Stream Server does not support loading data from multiple Kafka to
 # Preparations - 
 ## Master Side
 	1. Prepare a database + table which will receive the kafka data
-		```a. testdb=# CREATE TABLE json_from_kafka( customer_id int8, month int4, amount_paid decimal(9,2) );```
+		a. testdb=# CREATE TABLE json_from_kafka( customer_id int8, month int4, amount_paid decimal(9,2) );
 	2. Registering the GPSS Extension
 	You must explicitly register the Greenplum Stream Server extension in each database in which you will use GPSS to write data to Greenplum tables.
 		a. $ ssh gpadmin@gpmaster
