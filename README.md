@@ -1,3 +1,4 @@
+# Greenplum 5.16 GPSS feature
 The Greenplum Stream Server (GPSS) is an ETL (extract, transform, load) tool. An instance of the GPSS server ingests streaming data from one or more clients, using Greenplum Database readable external tables to transform and insert the data into a target Greenplum table. The data source and the format of the data are specific to the client.
 
 The Greenplum Stream Server includes the gpss command-line utility. When you run gpss, you start an instance of GPSS; this instance waits indefinitely for client data.
